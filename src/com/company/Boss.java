@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Boss {
     private int health;
     private int hits;
@@ -35,5 +37,10 @@ public class Boss {
 
     public void setDefenceType(int defenceType) {
         this.defenceType = defenceType;
+    }
+    public void changeBossDefence() {
+        Random r = new Random();
+        int randomNumber = r.nextInt(3) + 1;
+        setDefenceType(randomNumber);
     }
 }
